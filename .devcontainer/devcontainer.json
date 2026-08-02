@@ -1,0 +1,13 @@
+{
+  "name": "DevContainer",
+  "context": "..",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "pbkit.vscode-pbkit"
+      ]
+    }
+  }
+}
