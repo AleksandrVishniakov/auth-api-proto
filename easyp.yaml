@@ -10,7 +10,7 @@ deps:
 
 generate:
   inputs:
-    - directory: "proto/auth/v1"
+    - directory: "auth/v1"
   plugins:
     - name: go
       out: ./gen/go
