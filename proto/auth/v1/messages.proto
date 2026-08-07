@@ -2,10 +2,15 @@ syntax = "proto3";
 
 package auth.v1;
 
+import "validate/validate.proto";
+
 option go_package = "github.com/AleksandrVishniakov/auth-api-proto/gen/go/auth/v1;authv1";
 
 message HelloRequest {
-    string name = 1;
+    string name = 1 [(validate.rules).string = {
+        min_len: 2,
+        pattern: "^[a-zA-Zа-яА-Я\\s]*$"
+    }];
 }
 
 message HelloResponse {

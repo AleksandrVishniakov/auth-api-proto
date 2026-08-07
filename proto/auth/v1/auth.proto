@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package auth.v1;
 
-import "auth/v1/messages.proto";
+import "proto/auth/v1/messages.proto";
 
 option go_package = "github.com/AleksandrVishniakov/auth-api-proto/gen/go/auth/v1;authv1";
 

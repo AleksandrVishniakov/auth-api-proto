@@ -12,14 +12,5 @@ tasks:
     aliases: ["gen"]
     desc: "Generates code from .proto files."
     cmds:
-      - cmd: mkdir -p {{.GO_GEN_OUT_DIR}}
-      - |
-        protoc --proto_path {{.PROTO_DIR}} \
-          --go_opt=paths=source_relative \
-          --go-grpc_opt=paths=source_relative \
-          --go-grpc_out={{.GO_GEN_OUT_DIR}} \
-          --go_out={{.GO_GEN_OUT_DIR}} \
-          --validate_opt=paths=source_relative \
-          --validate_out=lang=go:{{.GO_GEN_OUT_DIR}} \
-          {{.PROTO_SERVICE_DIR}}/*.proto
+      - easyp generate
       - go mod tidy

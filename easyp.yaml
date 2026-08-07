@@ -1,0 +1,23 @@
+# EasyP configuration file.
+# Documentation: https://easyp.tech/docs/guide/introduction/what-is
+
+lint:
+  use:
+    - DEFAULT
+
+deps:
+  - github.com/bufbuild/protoc-gen-validate
+
+generate:
+  inputs:
+    - directory: "proto/auth/v1"
+  plugins:
+    - name: go
+      out: ./gen/go
+      opts:
+        paths: source_relative
+    - name: validate
+      out: ./gen/go
+      opts:
+        paths: source_relative
+        lang: "go"
