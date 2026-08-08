@@ -7,6 +7,7 @@ lint:
 
 deps:
   - github.com/bufbuild/protoc-gen-validate
+  - github.com/googleapis/googleapis
 
 generate:
   inputs:
@@ -25,3 +26,12 @@ generate:
       opts:
         paths: source_relative
         lang: "go"
+    - name: grpc-gateway
+      out: ./gen/go
+      opts:
+        paths: source_relative
+    - name: openapiv2
+      out: ./gen/go
+      opts:
+        simple_operation_ids: false
+        generate_unbound_methods: false

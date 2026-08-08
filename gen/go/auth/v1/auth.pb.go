@@ -7,6 +7,7 @@
 package authv1
 
 import (
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -24,9 +25,9 @@ var File_auth_v1_auth_proto protoreflect.FileDescriptor
 
 const file_auth_v1_auth_proto_rawDesc = "" +
 	"\n" +
-	"\x12auth/v1/auth.proto\x12\aauth.v1\x1a\x16auth/v1/messages.proto2E\n" +
-	"\vAuthService\x126\n" +
-	"\x05Hello\x12\x15.auth.v1.HelloRequest\x1a\x16.auth.v1.HelloResponseBEZCgithub.com/AleksandrVishniakov/auth-api-proto/gen/go/auth/v1;authv1b\x06proto3"
+	"\x12auth/v1/auth.proto\x12\aauth.v1\x1a\x16auth/v1/messages.proto\x1a\x1cgoogle/api/annotations.proto2X\n" +
+	"\vAuthService\x12I\n" +
+	"\x05Hello\x12\x15.auth.v1.HelloRequest\x1a\x16.auth.v1.HelloResponse\"\x11\x82\xd3\xe4\x93\x02\v:\x01*\"\x06/helloBEZCgithub.com/AleksandrVishniakov/auth-api-proto/gen/go/auth/v1;authv1b\x06proto3"
 
 var file_auth_v1_auth_proto_goTypes = []any{
 	(*HelloRequest)(nil),  // 0: auth.v1.HelloRequest

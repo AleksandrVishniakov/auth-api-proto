@@ -3,9 +3,15 @@ syntax = "proto3";
 package auth.v1;
 
 import "auth/v1/messages.proto";
+import "google/api/annotations.proto";
 
 option go_package = "github.com/AleksandrVishniakov/auth-api-proto/gen/go/auth/v1;authv1";
 
 service AuthService {
-    rpc Hello(HelloRequest) returns (HelloResponse);
+    rpc Hello(HelloRequest) returns (HelloResponse) {
+        option (google.api.http) = {
+            post: "/hello"
+            body: "*"
+        };
+    };
 }
