@@ -16,6 +16,10 @@ generate:
       out: ./gen/go
       opts:
         paths: source_relative
+    - name: go-grpc
+      out: ./gen/go
+      opts:
+        paths: source_relative
     - name: validate
       out: ./gen/go
       opts:
